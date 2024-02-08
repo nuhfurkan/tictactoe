@@ -1,0 +1,14 @@
+<h1 mat-dialog-title *ngIf="data.winner == 'X'; else loseheader">You win</h1>
+
+<ng-template #loseheader>
+  <h1 mat-dialog-title *ngIf="data.winner == 'O'; else tieheader">You lost</h1>
+</ng-template>
+
+<ng-template #tieheader>
+  <h1 mat-dialog-title>It is a Tie</h1>
+</ng-template>
+
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Close</button>
+</div>

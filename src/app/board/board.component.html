@@ -1,0 +1,15 @@
+<h1>Current Player: {{ player }} </h1>
+
+
+<button mat-button color="primary" (click)="newGame()">Start new Game</button>
+
+<main>
+    <app-square 
+        *ngFor="let val of squares; let i = index" 
+        [value]="val"
+        (click)="makeMove(i)"> 
+
+    </app-square>
+</main>
+
+
